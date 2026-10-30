@@ -1,0 +1,4 @@
+fastapi>=0.115,<1
+uvicorn>=0.30
+mutagen>=1.47
+segno>=1.6

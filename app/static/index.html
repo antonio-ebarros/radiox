@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0c0e"><title>Radio X</title>
+<link rel="manifest" href="/manifest.webmanifest"><link rel="icon" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Radio X"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="/style.css"></head><body>
+<header class="bar"><span class="logo"><a href="#/">RADIO</a><button id="us" data-a="secret" aria-label="Acesso">_</button><a href="#/">X</a></span><a class="btn" href="#/playlists">playlists</a>
+<form id="sf"><input id="q" type="search" placeholder="buscar" autocomplete="off" aria-label="Buscar"><button class="btn pri">pesquisar</button></form></header>
+<div class="bar ticker" role="marquee" aria-live="off"><div id="tk"></div></div>
+<main id="view"></main>
+<footer id="pl">
+<input type="range" class="seek" id="seek" min="0" max="1000" value="0" aria-label="Progresso">
+<button class="info" data-a="now" aria-label="Abrir tocando agora"><div class="art" id="pc"></div><div><b id="pt">nada tocando</b><span id="pa">escolha um álbum</span></div></button>
+<div class="ctl"><button class="ib" data-a="prev" id="bp" aria-label="Anterior"></button><button class="ib m" data-a="play" id="bpl" aria-label="Tocar"></button><button class="ib" data-a="next" id="bn" aria-label="Próxima"></button></div>
+<div class="ex"><button class="btn" data-a="mute" id="bmu">som</button><input type="range" class="seek vol" min="0" max="100" aria-label="Volume"><span id="tm">0:00 / 0:00</span><button class="btn" data-a="sh" id="bsh">aleatório</button><button class="btn" data-a="rp" id="brp">repetir</button></div>
+</footer>
+<section id="now" role="dialog" aria-modal="true" aria-label="Tocando agora" hidden><div class="np">
+<button class="btn" data-a="close" id="ncl">voltar</button>
+<div class="art" id="nart"></div>
+<div class="nt"><b id="ntt"></b><a id="nta" href="#/"></a><a id="ntb" href="#/"></a></div>
+<div class="nsk"><span id="nc1">0:00</span><input type="range" class="seek" id="nseek" min="0" max="1000" value="0" aria-label="Progresso"><span id="nc2">0:00</span></div>
+<div class="nct"><button class="btn" data-a="sh">aleatório</button><button class="ib" data-a="prev" id="np1" aria-label="Anterior"></button><button class="ib m" data-a="play" id="npl" aria-label="Tocar"></button><button class="ib" data-a="next" id="np3" aria-label="Próxima"></button><button class="btn" data-a="rp">repetir</button></div>
+<div class="nx"><button class="btn" data-a="bk">-10s</button><button class="btn" data-a="rate">1x</button><button class="btn" data-a="fw">+10s</button></div>
+<div class="nv"><button class="btn" data-a="mute">som</button><input type="range" class="seek vol" min="0" max="100" aria-label="Volume"></div>
+</div></section>
+<section id="pk" hidden></section>
+<div id="toast" hidden></div>
+<script src="/app.js"></script></body></html>
